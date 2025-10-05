@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 330px;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+    }
+
+    /* Screen */
+    .screen {
+      background: black;
+      color: white;
+      font-size: 40px;
+      text-align: right;
+      padding: 20px;
+      height: 100px;
+      overflow-x: auto;
+      border-bottom: 1px solid #333;
+      box-sizing: border-box;
+    }
+
+    /* Buttons Grid */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+      padding: 20px;
+    }
+
+    /* Buttons Style */
+    .btn {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      font-size: 22px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: white;
+      background: #2c2c2c;
+      transition: 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .operator {
+      background: #5a5a5a;
+    }
+
+    .equal {
+      background: #00cc44;
+      color: white;
+    }
+
+    .clear {
+      background: #3a3a3a;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <!-- Calculator Screen -->
+    <div class="screen" id="screen">0</div>
+
+    <!-- Calculator Buttons -->
+    <div class="buttons">
+      <button class="btn clear">C</button>
+      <button class="btn operator">( )</button>
+      <button class="btn operator">%</button>
+      <button class="btn operator">÷</button>
+
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator">×</button>
+
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator">-</button>
+
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator">+</button>
+
+      <button class="btn">+/-</button>
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn equal">=</button>
+    </div>
+  </div>
+</body>
+</html>
